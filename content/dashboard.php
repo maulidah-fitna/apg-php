@@ -1,5 +1,5 @@
 <?php
-    if(!defined('INDEX')) die("");
+    if(!defined('INDEX')) die();
 ?>
 
 <h1>Selamat Datang di Aplkasi Manajemen Pegawai</h1>

@@ -10,7 +10,7 @@
      <div class="container">
         <section class="login-box">
             <h2>Login Aplikasi</h2>
-            <form action="checklogin.php" method="post">
+            <form action="ceklogin.php" method="post">
                 <input type="text" name="username" id="username" placeholder="Username">
                 <input type="password" name="password" id="password" placeholder="Password">
                 <input type="submit" value="Login">

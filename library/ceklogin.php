@@ -1,11 +1,11 @@
 <?php
     session_start();
-    include "library/config.php";
+    include "config.php";
 
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-    $query = "SELECT * FROM user_ WHERE username = '$usename' AND password = '$password'";
+    $query = "SELECT * FROM user WHERE username = '$username' AND PASSWORD = '$password'";
     $hasil = mysqli_query($con, $query);
     $data = mysqli_fetch_array($hasil);
     $jml = mysqli_num_rows($hasil);
@@ -17,6 +17,6 @@
         header('location: index.php');
     }else{
         echo "<p align='center'>Login Gagal!</p>";
-        echo "<meta http-equiv='refresh' content='2, usl=login.php'>";
+        echo "<meta http-equiv='refresh' content='2, url=login.php'>";
     }
 ?>
