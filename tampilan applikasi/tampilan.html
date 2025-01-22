@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Absen Siswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aplikasi Absen Kehadiran Siswa</h1>
+        </header>
+
+        <section class="form-section">
+            <h2>Input Absen Siswa</h2>
+            <form>
+                <label for="nama">Nama Siswa:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="kelas">Kelas:</label>
+                <input type="text" id="kelas" name="kelas" required>
+
+                <label for="status">Status Kehadiran:</label>
+                <select id="status" name="status" required>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                </select>
+
+                <button type="submit">Absen</button>
+            </form>
+        </section>
+
+        <section class="data-absen">
+            <h2>Data Kehadiran Siswa</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Siswa</th>
+                        <th>Kelas</th>
+                        <th>Status Kehadiran</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>XII IPA 1</td>
+                        <td>Hadir</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>XII IPA 1</td>
+                        <td>Sakit</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
