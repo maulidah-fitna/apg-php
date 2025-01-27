@@ -1,5 +1,5 @@
 <?php
-    if (!defined('INDEX')) die();
+    if (!defined('INDEX')) header('location: index.php');
 
     $halaman = [
         "dashboard",

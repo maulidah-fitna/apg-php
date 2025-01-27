@@ -3,7 +3,7 @@ if(!defined('INDEX')) die("");
 
 $nama_jabatan = $_POST['nama'];
 $query = "INSERT INTO jabatan SET nama_jabatan = '$nama_jabatan'";
-$result = "mysqli_query(&con, $query)";
+$result = mysqli_query($con, $query);
 
 if($result) {
     echo "Jabatan <b>$nama_jabatan</b> Berhasil Disimpan!";

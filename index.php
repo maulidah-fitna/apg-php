@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 
-include "config.php";
+include "library/config.php";
 
 if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
     echo "<p align='center'>Anda Harus Login Terlebih Dahulu!</p>";

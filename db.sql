@@ -31,9 +31,9 @@ CREATE TABLE user_ (
 	id_user INT(5) NOT NULL AUTO_INCREMENT,
 	nama_lengkap VARCHAR(50) DEFAULT NULL,
 	username VARCHAR(20) DEFAULT NULL,
-	PASSWORD VARCHAR(50) DEFAULT NULL,
+	password VARCHAR(50) DEFAULT NULL,
 	 PRIMARY KEY (id_user)
 );
 
-INSERT INTO user_ (id_user, nama_lengkap, username, PASSWORD) VALUES
+INSERT INTO user_ (id_user, nama_lengkap, username, password) VALUES
 	(1, 'Najma Faricha', 'admin', 'N4jm4F4r1ch4');

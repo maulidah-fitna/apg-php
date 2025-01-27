@@ -10,11 +10,11 @@ $nama = $_POST['nama'];
 $jk = $_POST['jk'];
 $tgl = $_POST['tanggal'];
 $id_jabatan = $_POST['jabatan'];
-$keterangan = $_POST['keterangan'];
+$ket = $_POST['keterangan'];
 
 $error = "";
 
-if(foto == "") {
+if($foto == "") {
     $query = "INSERT INTO pegawai SET ";
     $query .= "foto = '$foto', ";
     $query .= "nama_pegawai = '$nama', ";
@@ -29,12 +29,14 @@ if(foto == "") {
         $error = "Maaf, Tipe File Tidak Didukung!";
     }elseif($ukuran >=1000000) {
         echo $ukuran;
-        $error = "Ukuran File Terlalu Besar (Lebih Dari 1 MB)!";
+        $error = " Ukuran File Terlalu Besar (Lebih Dari 1 MB)!";
     }else{
-        move_uploaded_file($lokasi, "images/".$foto);
+        $time = date('YmdHms');
+        $filefoto = $time."-".$foto;
+        move_uploaded_file($lokasi, "images/".$filefoto);
 
         $query = "INSERT INTO pegawai SET ";
-        $query .= "foto = '$foto', ";
+        $query .= "foto = '$filefoto', ";
         $query .= "nama_pegawai = '$nama', ";
         $query .= "jenis_kelamin = '$jk', ";
         $query .= "tgl_lahir = '$tgl', ";

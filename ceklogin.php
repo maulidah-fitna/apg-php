@@ -1,13 +1,17 @@
 <?php
     session_start();
-    include "config.php";
+    include "library/config.php";
 
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
     $query = "SELECT * FROM user WHERE username = '$username' AND PASSWORD = '$password'";
+    
+    // untuk menam
     $hasil = mysqli_query($con, $query);
     $data = mysqli_fetch_array($hasil);
+    
+    // menghitung jumlah baris data 
     $jml = mysqli_num_rows($hasil);
 
     if ($jml > 0) {

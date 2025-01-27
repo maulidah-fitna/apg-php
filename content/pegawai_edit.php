@@ -39,10 +39,10 @@ $data = mysqli_fetch_assoc($result);
      if($data['jenis_kelamin']=="L") {
         $l = "checked";
         $p = "";
-     }else(
+     }else{
         $l = "";
         $p = "checked";
-     )
+     }
      ?>
 
      <input type="radio" name="jk" id="jk" value="L"<?= $l ?> > Laki-Laki
@@ -68,8 +68,8 @@ $data = mysqli_fetch_assoc($result);
 $queryj = "SELECT * FROM jabatan ";
 $resultj = mysqli_query($con, $queryj);
 while($j = mysqli_fetch_assoc($resultj)) {
-    echo "<option value='$j[id_jabatan]";
-    if($j[id_jabatan] == $data[id_jabatan]) echo " selected";
+    echo "<option value='$j[id_jabatan]'";
+    if($j['id_jabatan'] == $data['id_jabatan']) echo " selected";
     echo "> $j[nama_jabatan] </option>";
 }
 ?>
